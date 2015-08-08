@@ -26,6 +26,7 @@ RUN apt-get update && \
     mkdir -p /var/log/supervisor && \
     cp src/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
     apt-get autoclean && \
+    rm -rf /src && \
     rm -rf /var/lib/apt/lists/*
 
 #   80 - Graphite Django Interface
